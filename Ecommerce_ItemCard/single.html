@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RamKart - Single Page</title>
+  <link rel="stylesheet" href="item.css" />
+</head>
+<body>
+  <div id="item">
+    <!-- Navbar -->
+    <div id="nav">
+      <h3 id="title">RamKart</h3>
+      <div class="navbuttons">
+        <h4><a href="#" onclick="showSection('home')">Home</a></h4>
+        <h4><a href="#" onclick="showSection('about')">About Us</a></h4>
+        <h4><a href="#" onclick="showSection('contact')">Contact Us</a></h4>
+      </div>
+    </div>
+
+    <!-- Sections -->
+    <div id="content">
+
+      <!-- Home Section -->
+      <div id="home" class="section active">
+        <h2>Welcome to RamKart 🛍️</h2>
+        <p>Your one-stop shop for gadgets and accessories!</p>
+        <div id="card-container">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=500&q=80" alt="Wireless Headphones">
+            <h3 class="item-name">Wireless Headphones</h3>
+            <p class="price">₹1,499 <span class="discount">20% OFF</span></p>
+            <p class="rating">⭐ 4.5 / 5</p>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80" alt="Laptop">
+            <h3 class="item-name">Laptop</h3>
+            <p class="price">₹49,999 <span class="discount">18% OFF</span></p>
+            <p class="rating">⭐ 4.4 / 5</p>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1600172454522-3c13b68d6d89?auto=format&fit=crop&w=500&q=80" alt="Wireless Earbuds">
+            <h3 class="item-name">Wireless Earbuds</h3>
+            <p class="price">₹1,199 <span class="discount">35% OFF</span></p>
+            <p class="rating">⭐ 4.6 / 5</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <div id="about" class="section">
+        <h2>About Us</h2>
+        <p>
+          At <strong>RamKart</strong>, we bring the latest tech gadgets right to your doorstep.  
+          Our mission is to make technology affordable and accessible for everyone.
+        </p>
+        <p>
+          We started in 2020 and have served over <strong>10,000+ happy customers</strong> so far.  
+          We focus on quality, fast delivery, and excellent customer service.
+        </p>
+      </div>
+
+      <!-- Contact Section -->
+      <div id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Have questions or feedback? We’d love to hear from you!</p>
+        <p><strong>Email:</strong> support@ramkart.com</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Address:</strong> Hyderabad, Telangana, India</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript for switching sections -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
